@@ -1,7 +1,7 @@
 #include <Arduboy2.h>
 Arduboy2 arduboy;
 
-//A simple "Magic The Gathering" life counter, helps keep track of life totals.
+//A simple "Magic The Gathering" life counter, helps keep track of life totals. Right + Left to reset.
 
 const unsigned char mtglogo[] PROGMEM  = {
   //width = 58, height = 58
@@ -51,11 +51,11 @@ void setup() {
     arduboy.setCursor(80,5);
     arduboy.setTextSize(1);
     arduboy.print("Player 2");
-    
+
     arduboy.drawBitmap(35, 8, mtglogo, 58, 58, WHITE);
 
     arduboy.display();
-
+    
 }
 
 
@@ -112,6 +112,8 @@ if (arduboy.justPressed(B_BUTTON))
  arduboy.print(p2);
  
     
-    arduboy.display();
+ arduboy.display();
+ 
+ arduboy.delayShort(100);
 
 }
