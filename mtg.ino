@@ -65,14 +65,14 @@ void loop() {
 
  arduboy.pollButtons();
 
- if (arduboy.justPressed(UP_BUTTON)) 
+ if (arduboy.justPressed(RIGHT_BUTTON)) 
   p1 = (p1 + 1);
   arduboy.setCursor(1,25);
   arduboy.setTextSize(3);
   arduboy.print("  ");
 
 
- if (arduboy.justPressed(DOWN_BUTTON)) {
+ if (arduboy.justPressed(LEFT_BUTTON)) {
   if (p1 > 0) {
     p1 = (p1 - 1);
     arduboy.setCursor(1,25);
@@ -82,13 +82,13 @@ void loop() {
     }
  }
 
-if (arduboy.justPressed(B_BUTTON)) 
+if (arduboy.justPressed(A_BUTTON)) 
   p2 = (p2 + 1);
   arduboy.setCursor(95,25);
   arduboy.setTextSize(3);
   arduboy.print("  ");
 
- if (arduboy.justPressed(A_BUTTON)) {
+ if (arduboy.justPressed(B_BUTTON)) {
   if (p2 > 0) {
     p2 = (p2 - 1);
     arduboy.setCursor(95,25);
@@ -98,7 +98,7 @@ if (arduboy.justPressed(B_BUTTON))
     }
  }
 
-  if (arduboy.justPressed(LEFT_BUTTON) and arduboy.justPressed(RIGHT_BUTTON)){
+  if (arduboy.justPressed(UP_BUTTON) and arduboy.justPressed(DOWN_BUTTON)){
     p1 = 20;
     p2 = 20;
   }
